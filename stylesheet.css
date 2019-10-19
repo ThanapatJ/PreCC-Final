@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Rufina:400,700&display=swap');
+body{
+  margin: 0;
+  font-family:Rufina;
+  
+}
+
+.landing{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 810px;
+}
+.land{
+  height: 810px;
+  display:flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.left:before{
+  display:block;
+  position:absolute;
+  content:'';
+  background-color:white;
+  width:1500px;
+  height:30px;
+  top:0;
+}
+
+.left:after{
+  display:block;
+  position:absolute;
+  content:'';
+  background-color:white;
+  width:40px;
+  height:80px;
+  left:50%;
+  top:0;
+  z-index:1;
+}
+.right{
+  background: url("https://i.ibb.co/FmYqmpL/me.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.right:before{
+  display:block;
+  position:absolute;
+  content:'';
+  background-color:#26de81;
+  width:40px;
+  height:800px;
+  left:50%;
+}
+
+
+.right:after{
+  display:block;
+  position:absolute;
+  content:'';
+  background-color:#26de81;
+  width:400px;
+  height:40px;
+  bottom:0;
+  
+}
+.whiteright{
+  display:block;
+  position:absolute;
+  content:'';
+  background-color:white;
+  width:30px;
+  height:1000px;
+  bottom:0;
+  right:0;
+  z-index:1;
+}
+.whiterightcorner{
+  display:block;
+  position:absolute;
+  content:'';
+  background-color:white;
+  width:80px;
+  height:40px;
+  bottom:0;
+  right:0;
+  z-index:1;
+}
+
+.textcontainer{
+  padding:30px;
+}
+/*   about     */
+.about{
+  height:2000px;
+  display:flex;
+}
+.aboutme{
+  height:1000px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0!important;
+}
+.aboutpages{
+  width:50%;
+}
+
+.aboutpages div{
+  height:2000px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:50px;
+  align-items:center;
+}
+.skill{
+  font-size:18px;
+  font-weight:bold;
+}
+.edum{
+  list-style-type:none;
+ border: 2px solid ;
+  background-color:white;
+  text-align:center;
+  position:relative;
+  font-weight:bold;
+  width:100px;
+  margin: 0 auto;
+  
+}
+.edum:after{
+    content: "";
+		position: absolute;
+		width: 300px;
+		height: 50px;
+		right: 10px;
+		top: 10px;
+		 border: 2px solid white ;
+  background-color:#26de81;
+    z-index: -10;
+}
+.edus{
+  list-style-type:none;
+   z-index: 1;
+  text-align:center;
+  font-size:14.5px;
+  margin-right:30px;
+  line-height:25px;
+  margin-top:10px;
+}
+.aboutpages div>p{
+  width:80%;
+  line-height:40px;
+  
+}
+.aboutpages div:nth-child(1){
+  border: 2px solid;
+  margin-right:30px;
+}
+.aboutpages div:nth-child(2){
+  border: 2px solid ;
+  margin-top:40px;
+  margin-right:30px;
+}
+/*-------contactinfo---------*/
+.contact ul li{
+  list-style-type: none;
+  line-height:30px;
+  
+}
+.contact h1{
+  padding-left:40px;
+}
+.contact{
+  padding-right:30px;
+  background-color:white;
+ border:2px solid #26de81;
+  position: relative;
+}
+.contact:after{
+    content: "";
+		position: absolute;
+		width: 400px;
+		height: 200px;
+		right: 20px;
+		top: 20px;
+		background: #26de81;
+    z-index: -1;
+}
