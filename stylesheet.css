@@ -10,10 +10,10 @@ body{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  height: 810px;
+  height: 100vh;
 }
 .land{
-  height: 810px;
+  height: 100%;
   display:flex;
   flex-basis: 50%;
   justify-content: center;
@@ -25,7 +25,7 @@ body{
   position:absolute;
   content:'';
   background-color:white;
-  width:1500px;
+  width:150%;
   height:30px;
   top:0;
 }
@@ -52,7 +52,7 @@ body{
   content:'';
   background-color:#26de81;
   width:40px;
-  height:800px;
+  height:100vh;
   left:50%;
 }
 
@@ -62,7 +62,7 @@ body{
   position:absolute;
   content:'';
   background-color:#26de81;
-  width:400px;
+  width:50%;
   height:40px;
   bottom:0;
   
@@ -73,7 +73,7 @@ body{
   content:'';
   background-color:white;
   width:30px;
-  height:1000px;
+  height:100vh;
   bottom:0;
   right:0;
   z-index:1;
@@ -95,11 +95,12 @@ body{
 }
 /*   about     */
 .about{
-  height:2000px;
+  height:200vh;
   display:flex;
 }
 .aboutme{
-  height:1000px;
+  width:50%;
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -110,7 +111,7 @@ body{
 }
 
 .aboutpages div{
-  height:2000px;
+  height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -128,15 +129,15 @@ body{
   text-align:center;
   position:relative;
   font-weight:bold;
-  width:100px;
+  width:80%;
   margin: 0 auto;
   
 }
 .edum:after{
     content: "";
 		position: absolute;
-		width: 300px;
-		height: 50px;
+		width: 100%;
+		height: 100%;
 		right: 10px;
 		top: 10px;
 		 border: 2px solid white ;
@@ -184,10 +185,118 @@ body{
 .contact:after{
     content: "";
 		position: absolute;
-		width: 400px;
-		height: 200px;
+		width: 100%;
+		height: 100%;
 		right: 20px;
 		top: 20px;
 		background: #26de81;
     z-index: -1;
 }
+
+
+
+/*animationbg*/
+.box1 {
+  z-index:-5;
+      height: 25px;
+      width: 25px;
+      position: fixed;
+      top: 30%;
+      left: 4%;
+      border: 1.5px solid #ffbe76;
+      border-radius: 50%;
+      animation: animaterotatation 50s linear infinite;
+      transition: all 0.3s ease-out;
+
+
+}
+.hexagon{
+  z-index:-5;
+  position: fixed;
+  top: 5%;
+  left: 18%;
+  transform: rotate(10deg);
+  animation: animaterotatation 30s linear infinite;
+  transition: all 0.3s ease-out;
+}
+
+.box2 {
+  z-index:-5;
+      height: 50px;
+      width: 50px;
+      position: fixed;
+      top: 50%;
+      left: 60%;
+      border: 1.5px solid #a29bfe ;
+      transform: rotate(50deg);
+      border-radius: 3px;
+      animation: animaterotatation 50s linear infinite;
+      transition: all 0.3s ease-out;
+}
+
+.triangle {
+  z-index:-5;
+      position: fixed;
+      top: 5%;
+      left: 80%;
+      transform: rotate(10deg);
+      animation: animaterotatation 30s linear infinite;
+      transition: all 0.3s ease-out;
+}
+.waves{
+  z-index:-5;
+  top: 55%;
+  left: 30%;
+  position: fixed;
+  animation: animaterotatation 35s linear infinite;
+  transition: all 0.3s ease-out;
+}
+.box4 {
+  z-index:-5;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  top: 78%;
+  left: 20%;
+  border: 1px solid lightgreen;
+  transform: rotate(80deg);
+  border-radius: 3px;
+  animation: animaterotatation 35s linear infinite;
+  transition: all 0.3s ease-out;
+}
+
+.box5 {
+  z-index:-5;
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  top: 88%;
+  left: 75%;
+  border: 1px solid #ff7979;
+  border-radius: 50%;
+  animation: animaterotatation 60s linear infinite;
+  transition: all 0.3s ease-out;
+
+}
+@keyframes animaterotatation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+      transform: translateY(100px) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+      opacity: 1;
+  }
+}
+
+/*------------*/
+
+ @media screen and (min-width: 768px){
+            .break { display: none; }
+          .edus{line-height:60px;
+             margin-top:0;}
+  }
