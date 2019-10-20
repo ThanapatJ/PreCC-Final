@@ -2,9 +2,30 @@
 body{
   margin: 0;
   font-family:Rufina;
+  transition: 0.3s;
   
 }
-
+body.active{
+  background: #0f0f0f;
+  color: white;
+}
+.progress{
+  position: fixed;
+  height: 7px;
+  background-color: #26de81;
+  z-index: 10;
+}
+#name{
+  caret-color: #26de81;
+  outline: 0px solid transparent;
+  
+}
+.editname i{
+  transition: ease-in-out 0.3s;
+}
+.editname i:hover{
+  color: #26de81;
+}
 .landing{
   display: flex;
   flex-direction: row;
@@ -28,6 +49,7 @@ body{
   width:150%;
   height:30px;
   top:0;
+  transition: 0.3s;
 }
 
 .left:after{
@@ -40,6 +62,10 @@ body{
   left:50%;
   top:0;
   z-index:1;
+  transition: 0.3s;
+}
+.left.active:before,.left.active:after{
+  background-color:#0f0f0f;
 }
 .right{
   background: url("https://i.ibb.co/FmYqmpL/me.jpg") no-repeat center;
@@ -77,6 +103,7 @@ body{
   bottom:0;
   right:0;
   z-index:1;
+  transition: 0.3s;
 }
 .whiterightcorner{
   display:block;
@@ -88,10 +115,21 @@ body{
   bottom:0;
   right:0;
   z-index:1;
+  transition: 0.3s;
+}
+.whiteright.active,.whiterightcorner.active{
+  background-color: #0f0f0f;
 }
 
 .textcontainer{
   padding:30px;
+  z-index: 5;
+}
+.editname{
+  display: flex;
+}
+.editname i{
+  line-height: 100px;
 }
 /*   about     */
 .about{
@@ -126,6 +164,7 @@ body{
   list-style-type:none;
  border: 2px solid ;
   background-color:white;
+  color: black;
   text-align:center;
   position:relative;
   font-weight:bold;
@@ -167,6 +206,59 @@ body{
   margin-top:40px;
   margin-right:30px;
 }
+
+.skilltable{
+  margin:0!important;
+  border: 0!important;
+  width: 50%;
+  justify-content: flex-start!important;
+  
+}
+.addtable{
+  margin:0!important;
+  border: 0!important;
+  justify-content: flex-end!important;
+  padding-bottom: 40%;
+  width: 100%;
+  height: 100%!important;
+}
+.addtable button{
+  font-size: 1em;
+  font-family:Rufina;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 15px 30px 15px 30px;
+  border:2px solid black;
+  background: white;
+  cursor: pointer;
+  transition: all 0.27s ease;
+  position: relative;
+}
+.addtable button:hover{
+  background-color: #26de81;
+  border:2px solid white;
+  color: white;
+}
+.addtable input{
+  border:2px solid black;
+  padding: 8px;
+  width:90%;
+  font-size: 1em;
+  font-family:Rufina;
+  caret-color: #26de81;
+
+}
+.addtable button:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 10px;
+  top: 10px;
+  background: #26de81;
+  z-index: -1;
+}
+
 /*-------contactinfo---------*/
 .contact ul li{
   list-style-type: none;
@@ -181,6 +273,7 @@ body{
   background-color:white;
  border:2px solid #26de81;
   position: relative;
+  color: black;
 }
 .contact:after{
     content: "";
@@ -192,6 +285,47 @@ body{
 		background: #26de81;
     z-index: -1;
 }
+/*  toggle */
+.darkoption{
+  display: table;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 50px;
+ 
+}
+.toggle{
+  background:white;
+  border: 2px solid black;
+  width:70px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.5s;
+  z-index: 4;
+}
+.toggle:before{
+  position: absolute;
+  content: '';
+  margin-top: 2px;
+  margin-left: 2px;
+  width: 30px;
+  height: 30px;
+  background: #26de81;
+  border-radius: 50%;
+  z-index: 5;
+  transition:0.3s;
+}
+.toggle.active{
+  background: #26de81;
+}
+.toggle.active:before{
+  margin-left: 38px;
+  background: white;
+}
+
+
+
+
 
 
 
@@ -296,7 +430,11 @@ body{
 /*------------*/
 
  @media screen and (min-width: 768px){
-            .break { display: none; }
+          .break { display: none; }
           .edus{line-height:60px;
              margin-top:0;}
+          .darkoption{
+            display: flex;
+            justify-content: space-between;
+          }
   }

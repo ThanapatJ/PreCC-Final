@@ -3,31 +3,43 @@
 <head>
 <title>Thanapat Jumnongrat</title>
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
-<body>
- 
-  
+<body id="darkmode">
+  <!-----------progress------------>
+  <div class="progress"></div>
   
  <!-----------intro------------>
   <div class = "landing">
-    <div class = "land left">
+    <div class = "land left" id=bar1>
       <div class="textcontainer">
-        <h1>Thanapat J</h1>
-        <p>[ta-na-phat j]</p>
+        <div class="editname">
+            <h1 id="name" class="inactive" spellcheck="false">Thanapat J </h1>
+            <i class="fa fa-pencil"></i> 
+        </div>
+        <p contentEditable=true spellcheck="false" style="outline: 0px solid transparent;caret-color: #26de81;">[ta-na-phat j]</p>
         <p>(n.) palm ; a person who is being the change he wishes to see.</p>
+
+        <div class="darkoption">
+          <p style="font-weight: bold; text-align: center" >Dark Mode </p>
+          <div id="switchmode" class="toggle"></div> 
+        </div>
+        
       </div>
+
+      
       
     </div>
    
     <div class = "land right">
-      <div class = "whiteright"></div>
-      <div class = "whiterightcorner"></div>
+      <div class = "whiteright" id="bar2"></div>
+      <div class = "whiterightcorner" id="bar3"></div>
     </div>  
   </div>
   
   <br><br><br><br>
-<!----------edu/skills------------>
+<!----------about(contact)------------>
   <section class="about">
     <div class="aboutme">
       
@@ -49,15 +61,49 @@
     </div>
     
     <div class="aboutpages">
+      <!---------skills--------->
       <div>
       <h2><i style="color:#26de81" class="fa fa-check"></i> Skills</h2>
+        <div class="skilltable">
+          <table id="table" style="width: 100%;text-align: center;font-weight: bold;">
+            <tr>
+              <td><i style="color:#26de81; font-size:30px;" class="fa fa-html5"></i></td>
+              <td class="skillword">HTML</td>
+              <td><i style="color:#ff7979; font-size:20px;cursor: pointer;" class="fa fa-times"></i></td>
+            </tr>
+            <tr>
+              <td><i style="color:#26de81; font-size:30px;" class="fa fa-css3"></i></td>
+              <td class="skillword">CSS</td>
+              <td><i style="color:#ff7979; font-size:20px;cursor: pointer;" class="fa fa-times"></i></td>
+            </tr>
+            <tr>
+              <td><i style="color:#26de81; font-size:20px;" class="fi-xnsuxl-javascript"></i></td>
+              <td class="skillword">JS</td>
+              <td><i style="color:#ff7979; font-size:20px;cursor: pointer;" class="fa fa-times"></i></td>
+            </tr>
+            <tr>
+                <td><i style="color:#26de81; font-size:30px; font-weight: bold" class="fa fa-code"></i></td>
+                <td class="skillword">C</td>
+                <td><i style="color:#ff7979; font-size:20px;cursor: pointer;" class="fa fa-times"></i></td>
+              </tr>
+          </table>
+
+          <div class="addtable">
+            <h3>Input : </h3>
+            <input type="text" name="add" id="add">
+            <button onclick="addrow();">Add</button>
+          </div>
+        </div>  
+
+      <!-----------------
       <ul class="skill">
         <li> <i style="color:#26de81" class="fa fa-html5"></i> HTML</li>
         <li> <i style="color:#26de81" class="fa fa-css3"></i> CSS</li>
         <li> Javascript</li>
         </ul>
+      -->
     </div>
-    
+     <!---------education--------->
     <div>
       <h2 class=edu>
         <i style="color:#26de81" class="fa fa-graduation-cap"></i> 
@@ -97,5 +143,6 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
   <script src="myscript.js"></script>
+  <script defer src="https://friconix.com/cdn/friconix.js"></script> 
 </body>
 </html>
